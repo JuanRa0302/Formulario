@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/formulario', [FormularioController::class, 'index'])->name('formulario.index');
-Route::post('/formulario/enviar', [FormularioController::class, 'enviar'])->name('formulario.enviar');
+Route::post('/formulario/enviar', [FormularioController::class, 'send'])->name('formulario.send');

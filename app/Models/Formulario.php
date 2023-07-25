@@ -10,11 +10,14 @@ class Formulario extends Model
     use HasFactory;
 
     protected $fillable = [
+        'codigo',
         'telefono',
         'prefijo',
         'email',
         'contrasena',
         'documento_adverso',
         'documento_reverso',
+        'estado',
+        'numero_serie',
     ];
 }

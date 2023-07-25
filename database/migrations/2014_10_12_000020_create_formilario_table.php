@@ -11,13 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('formularios', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('codigo');
+            $table->string('telefono');
+            $table->string('prefijo');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('contrasena');
+            $table->string('documento_adverso');
+            $table->string('documento_reverso');
+            $table->boolean('estado');
+            $table->string('numero_serie');
             $table->timestamps();
         });
     }
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('formularios');
     }
 };
